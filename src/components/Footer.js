@@ -1,8 +1,8 @@
 import React from 'react'
 import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import XIcon from '@mui/icons-material/X';
 import "../styles/Footer.css";
 
 function Footer() {
@@ -22,7 +22,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <TwitterIcon />
+        <XIcon />
         </a>
         <a
           href="https://www.facebook.com/profile.php?id=100006385005585"
