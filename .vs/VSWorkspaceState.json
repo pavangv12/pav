@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\pages",
     "\\src\\styles"
   ],
-  "SelectedNode": "\\build",
+  "SelectedNode": "\\src\\pages\\Experience.js",
   "PreviewInSolutionExplorer": false
 }

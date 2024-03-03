@@ -131,7 +131,7 @@ function Experience() {
             iconStyle={{ background: "#3e497a", color: "#fff" }}
             icon={<DownloadIcon />}
           >
-          <Button onClick={onButtonClick} align = "center"> Download Resume!</Button>
+          {/*<Button onClick={onButtonClick} align = "center"> Download Resume!</Button>*/}
           </VerticalTimelineElement>
         </VerticalTimeline>
         
