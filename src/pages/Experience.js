@@ -7,21 +7,21 @@ import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import DownloadIcon from '@mui/icons-material/Download';
 import "../styles/Experience.css"
-import { Button } from '@mui/material';
+//import { Button } from '@mui/material';
 
 function Experience() {
-  const onButtonClick = () => {
-    fetch('SamplePDF.pdf').then(response => {
-        response.blob().then(blob => {
-            const fileURL = window.URL.createObjectURL(blob);
-            let alink = document.createElement('a');
-            alink.href = fileURL;
-            alink.download = 'SamplePDF.pdf';
-            alink.click();
-        })
-    })
+  //const onButtonClick = () => {
+  //  fetch('SamplePDF.pdf').then(response => {
+  //      response.blob().then(blob => {
+  //          const fileURL = window.URL.createObjectURL(blob);
+  //          let alink = document.createElement('a');
+  //          alink.href = fileURL;
+  //          alink.download = 'SamplePDF.pdf';
+  //          alink.click();
+  //      })
+  //  })
 
-  } 
+  //} 
   return (
       <div className="experience">
         <VerticalTimeline lineColor="#3e497a">
