@@ -1,5 +1,5 @@
-import Proj1 from "../assets/success.png";
-import Proj2 from "../assets/success.png"
+import Proj1 from "../assets/ToDoList.png";
+import Proj2 from "../assets/Portfolio.jpg"
 import Proj3 from "../assets/success.png";
 import Proj4 from "../assets/success.png"
 import Proj5 from "../assets/success.png";
@@ -8,20 +8,20 @@ import Proj6 from "../assets/success.png"
 
 export const ProjectList = [
   {
-    name: "Dijkstra Algorithm Visualizer",
+    name: "To-Do List App",
     image: Proj1,
-    skills: "JavaScript,HTML,CSS",
-    github: "https://bbc.com",
+    skills: "C#, WPF",
+        github: "https://github.com/pavangv12/ToDo-List-App",
   },
   {
-    name: "Ecommerce Website",
-    image: Proj1,
+    name: "Personal Portfolio",
+    image: Proj2,
     skills: "React,Node.js,MongoDB",
-    github: "www.google.com",
+      github: "https://github.com/pavangv12/pav",
   },
   {
     name: "Amazon Website",
-    image: Proj2,
+    image: Proj3,
     skills: "Angular,MongoDB",
     github: "www.google.com",
   },

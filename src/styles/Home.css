@@ -3,6 +3,7 @@
     align-items: center;
     font-family: "Arial", sans-serif;
     color: #3e497a;
+    padding-top: 80px;
   }
   
   .about {
@@ -14,7 +15,7 @@
     align-items: center;
     text-align: center;
     background-size: cover;
-    background-image: url(../assets/temp_main_image.jpg);
+    background-image: url(../assets/BGImage.jpg);
     color: #f0f0f0;
   }
 

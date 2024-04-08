@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\build",
-    "\\public",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\helperes",
     "\\src\\pages",
     "\\src\\styles"
   ],
-  "SelectedNode": "\\build\\robots.txt",
+  "SelectedNode": "\\src\\helperes\\ProjectList.js",
   "PreviewInSolutionExplorer": false
 }
