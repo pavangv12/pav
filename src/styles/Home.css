@@ -3,7 +3,7 @@
     align-items: center;
     font-family: "Arial", sans-serif;
     color: #3e497a;
-    padding-top: 80px;
+    padding-top: 10px;
   }
   
   .about {
@@ -15,16 +15,32 @@
     align-items: center;
     text-align: center;
     background-size: cover;
-    background-image: url(../assets/BGImage.jpg);
+    background-image: url(../assets/Pavan_backgroundgpt.webp);
     color: #f0f0f0;
-  }
+    } 
+
+    /*.about {
+      width: 100%;
+      height: calc(100vh - 5px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #f0f0f0;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url(../assets/Pavan_backgroundgpt.webp);
+      background-size: cover;
+      background-blend-mode: overlay;
+    } */
+    
 
     .about h2 {
         /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;*/
         font-family: cursive, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 80px;
-        color: #9999ff;
-        height: 50px;
+        color: #003d6e;
+        height: 1000px;
     }
 
     .about .prompt {
@@ -41,12 +57,24 @@
     color: rgb(253, 253, 251);
   }
 
-.prompt h6 {
+  /*.prompt h6 {
     font-size: large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
-    color: #e0e0eb;
-}
+    color: #000000;
+  }*/
+
+  .prompt h6 {
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    color: #000000;
+    background-color: rgba(240, 240, 240, 0.7); /* Light gray background */
+    padding: 5px; /* Space around the text */
+    border-radius: 5px; /* Rounded corners */
+    display: block; /* Ensures the background wraps tightly around the text */
+  }
+  
   
   .skills {
     font-size: 35px;
