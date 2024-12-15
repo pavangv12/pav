@@ -64,17 +64,18 @@
     color: #000000;
   }*/
 
-  .prompt h6 {
+  .prompt h6 
+  {
     font-size: large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
-    color: #000000;
-    background-color: rgba(240, 240, 240, 0.7); /* Light gray background */
-    padding: 5px; /* Space around the text */
-    border-radius: 5px; /* Rounded corners */
+    color: #FFFFFF; /* White text */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with slight transparency */
+    padding: 10px; /* Space around the text for better readability */
+    border-radius: 8px; /* Smooth rounded corners */
     display: block; /* Ensures the background wraps tightly around the text */
+    border: 1px solid #FFD700; /* Optional: Gold border for accent */
   }
-  
   
   .skills {
     font-size: 35px;
