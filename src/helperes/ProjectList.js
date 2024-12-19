@@ -1,9 +1,10 @@
 import Proj1 from "../assets/ToDoList.png";
 import Proj2 from "../assets/Portfolio.jpg"
-import Proj3 from "../assets/success.png";
-import Proj4 from "../assets/success.png"
-import Proj5 from "../assets/success.png";
-import Proj6 from "../assets/success.png"
+import Proj3 from "../assets/Proj3.jpg";
+import Proj4 from "../assets/Proj4.jpeg"
+import Proj5 from "../assets/AppBreweryWallpaper 2.png";
+import Proj6 from "../assets/AppBreweryWallpaper 4.png"
+import Proj7 from "../assets/AppBreweryWallpaper 5.png"
 
 
 export const ProjectList = [
@@ -20,32 +21,32 @@ export const ProjectList = [
       github: "https://github.com/pavangv12/pav",
   },
   {
-    name: "Amazon Website",
+    name: "Stock Market Analysis and Prediction on Time Series Data",
     image: Proj3,
-    skills: "Angular,MongoDB",
-    github: "www.google.com",
+    skills: "Python, Machine learning",
+    github: "https://github.com/pavangv12/Time-series-analysis-predict-stock-price",
   },
   {
-    name: "Spotify Clone",
-    image: Proj3,
-    skills: "React,Node.js,MongoDB,SpotifyAPI",
-    github: "www.google.com",
+    name: "Nifty 50 Analysis",
+    image: Proj4,
+    skills: "Python, Machine Learning, Streamlit",
+    github: "https://github.com/pavangv12/NIFTY-50-Stock-Analysis",
   },
   {
     name: "Social Media Website",
-    image: Proj4,
+    image: Proj5,
     skills: "React,Node.js,MySQL,GraphQL",
     github: "www.google.com",
   },
   {
     name: "Dashboard Visualizer",
-    image: Proj5,
+    image: Proj6,
     skills: "JavaScript,HTML,CSS",
     github: "www.google.com",
   },
   {
     name: "Mobile Game",
-    image: Proj6,
+    image: Proj7,
     skills: "React Native,JavaScript,HTML,CSS",
     github: "www.google.com",
   },
