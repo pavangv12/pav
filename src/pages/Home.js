@@ -10,7 +10,16 @@ function Home() {
       <div className="about">
         <h2> Hi, I'm Pavan</h2>
           <div className="prompt">
-                  <h6 className="bio"> I am a dynamic and results-driven Software Engineer with a robust academic foundation in Computer Science and Engineering, complemented by degrees from PES College of Engineering and M.S. Ramaiah Institute of Technology. With expertise spanning software development, data science, and database management, I bring a versatile skill set to the table. At Beckman Coulter India Pvt. Ltd., Radiometer Opco, I have been instrumental in driving innovation through Windows application development, log data analysis, and data science initiatives, leveraging machine learning to extract actionable insights. My prior experience at Cisco, via Tata Consultancy Services, involved managing critical databases and spearheading disaster recovery strategies. Passionate about solving complex challenges, I excel at bridging technology and business needs to deliver impactful solutions. With a strong commitment to continuous learning and innovation, I aim to contribute to transformative projects that shape the future of technology.</h6>
+          <h6 className="bio">
+          I am a Data Scientist who believes that every dataset has a story to tell. With a strong foundation in machine learning, predictive analytics, and statistical modeling, I turn complex data into valuable insights that drive meaningful impact.
+
+From building predictive models that improve efficiency to uncovering hidden trends in large datasets, I love working at the intersection of data, technology, and decision-making. My experience spans classification, regression, and clustering, leveraging tools like Python, SQL, TensorFlow, and Scikit-learn to create solutions that matter.
+
+Beyond my technical skills, I am a published researcher in cybersecurity, showcasing my analytical approach to problem-solving. I am constantly pushing the boundaries of my knowledge, exploring deep learning, AI, and time series forecasting to stay ahead in this fast-evolving field.
+
+If you’re looking for a data-driven thinker who thrives on solving real-world challenges, let’s connect and create something impactful together.
+</h6>
+
 
           <a
             href="https://www.linkedin.com/in/pavangv12/"
@@ -45,19 +54,6 @@ function Home() {
               Matplotlib, Clustering, Regression, Classification, Neural Network, ASP.NET Core, C#, Blazor, WPF
             </span>
           </li>
-          {/*
-          <li className="item">
-            <h2>Back-End</h2>
-            <span>
-              NodeJS, Java Spring, .NET, ExpressJS, GraphQL, ApolloServer,
-              MySQL, MongoDB, DynamoDB, DigitalOcean, AWS S3, MS SQL
-            </span>
-          </li>
-          <li className="item">
-            <h2>Languages</h2>
-            <span>JavaScript, Java, Python, C#, C, C++, TypeScript, Go</span>
-          </li> 
-          */ }
         </ol>
       </div>
     </div>

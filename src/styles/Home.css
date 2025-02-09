@@ -39,7 +39,7 @@
   color: #003d6e;
   margin: 50px 0;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for better visibility */
-  animation: fadeIn 1.5s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .about .prompt {
@@ -71,7 +71,7 @@
   padding: 15px; /* Padding for better spacing */
   border-radius: 10px; /* Rounded corners */
   border: 1px solid #ffc107; /* Gold border for accent */
-  margin-top: 50px; /* Adjust spacing */
+  margin-top: 300px; /* Adjust spacing */
 }
 
 .skills {
