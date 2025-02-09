@@ -1,29 +1,57 @@
 .footer {
-    width: 100%;
-    height: 200px;
-    background: #21325e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 10px;
-    margin-top: 200px;
+  width: 100%;
+  height: auto; /* Adjust height dynamically */
+  background: #21325e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px; /* Add consistent padding */
+  margin-top: 200px;
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 15px; /* Add gap for better spacing between icons */
+}
+
+.socialMedia a {
+  color: white;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.socialMedia a:hover {
+  transform: scale(1.1); /* Subtle zoom effect */
+  color: #00bcd4; /* Change icon color on hover */
+}
+
+.socialMedia svg {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.footer-text {
+  color: white;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-heading {
+    font-size: 1.2rem; /* Adjust heading size for smaller screens */
   }
-  
+
   .socialMedia svg {
-    color: white;
-    margin: 20px;
-    font-size: 70px;
-    cursor: pointer;
+    font-size: 40px;
   }
-  
-  .footer p {
-    color: white;
+
+  .footer-text {
+    font-size: 0.8rem;
   }
-  
-  @media only screen and (max-width: 600px) {
-    .footer svg {
-      font-size: 50px;
-    }
-  }
-  
+}

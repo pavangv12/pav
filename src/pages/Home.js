@@ -9,7 +9,7 @@ function Home() {
     <div className="home">
       <div className="about">
         <h2> Hi, I'm Pavan</h2>
-              <div className="prompt">
+          <div className="prompt">
                   <h6 className="bio"> I am a dynamic and results-driven Software Engineer with a robust academic foundation in Computer Science and Engineering, complemented by degrees from PES College of Engineering and M.S. Ramaiah Institute of Technology. With expertise spanning software development, data science, and database management, I bring a versatile skill set to the table. At Beckman Coulter India Pvt. Ltd., Radiometer Opco, I have been instrumental in driving innovation through Windows application development, log data analysis, and data science initiatives, leveraging machine learning to extract actionable insights. My prior experience at Cisco, via Tata Consultancy Services, involved managing critical databases and spearheading disaster recovery strategies. Passionate about solving complex challenges, I excel at bridging technology and business needs to deliver impactful solutions. With a strong commitment to continuous learning and innovation, I aim to contribute to transformative projects that shape the future of technology.</h6>
 
           <a
@@ -39,12 +39,13 @@ function Home() {
         <h1> Skills</h1>
         <ol className="list">
           <li className="item">
-            <h2> Front-End</h2>
+            <h2> Skills</h2>
             <span>
-              ReactJS, Angular, Redux, HTML, CSS, React Native, Flutter, NPM,
-              Ionic, BootStrap, MaterialUI, Yarn, TailwindCSS, StyledComponents
+              Python, Scikit-leaern, SQL, Power BI, Tensor Flow, Pandas, EDA, Numpy,
+              Matplotlib, Clustering, Regression, Classification, Neural Network, ASP.NET Core, C#, Blazor, WPF
             </span>
           </li>
+          {/*
           <li className="item">
             <h2>Back-End</h2>
             <span>
@@ -55,7 +56,8 @@ function Home() {
           <li className="item">
             <h2>Languages</h2>
             <span>JavaScript, Java, Python, C#, C, C++, TypeScript, Go</span>
-          </li>
+          </li> 
+          */ }
         </ol>
       </div>
     </div>

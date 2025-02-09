@@ -1,126 +1,153 @@
 .home {
-    width: 100%;
-    align-items: center;
-    font-family: "Arial", sans-serif;
-    color: #3e497a;
-    padding-top: 10px;
+  width: 100%;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  color: #3e497a;
+  padding-top: 10px;
+}
+
+.about {
+  width: 100%;
+  height: calc(100vh - 5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #f0f0f0;
+  background-image: url(../assets/Pavan_background.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+  z-index: -1;
+}
+
+.about h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", cursive, sans-serif;
+  font-size: 60px;
+  color: #003d6e;
+  margin: 50px 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for better visibility */
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.about .prompt {
+  width: 80%;
+  font-size: 24px;
+  line-height: 1.6;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.prompt svg {
+  font-size: 40px;
+  margin: 8px;
+  color: #ffc107; /* Highlight color for icons */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.prompt svg:hover {
+  transform: scale(1.2);
+  color: #ff5722; /* Hover color for icons */
+}
+
+.prompt h6 {
+  font-size: 18px;
+  font-family: "Verdana", Geneva, Tahoma, sans-serif;
+  text-align: justify;
+  color: #ffffff; /* White text for readability */
+  background-color: rgba(0, 0, 0, 0.6); /* Black background with transparency */
+  padding: 15px; /* Padding for better spacing */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid #ffc107; /* Gold border for accent */
+  margin-top: 50px; /* Adjust spacing */
+}
+
+.skills {
+  font-size: 28px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills h1 {
+  color: #3e497a;
+  font-size: 36px;
+  margin-bottom: 20px;
+  animation: slideIn 1.2s ease-in-out;
+}
+
+.skills .list {
+  list-style: none;
+  width: 60%;
+  padding: 0;
+}
+
+.list span {
+  font-size: 18px;
+  display: block;
+  margin: 10px 0;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.list span:hover {
+  color: #003d6e;
+}
+
+@media only screen and (max-width: 600px) {
+  .about h2 {
+    font-size: 32px;
   }
-  
-  .about {
-    width: 100%;
-    height: calc(100vh - 5px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-size: cover;
-    background-image: url(../assets/Pavan_backgroundgpt.webp);
-    color: #f0f0f0;
-    } 
 
-    /*.about {
-      width: 100%;
-      height: calc(100vh - 5px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #f0f0f0;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                  url(../assets/Pavan_backgroundgpt.webp);
-      background-size: cover;
-      background-blend-mode: overlay;
-    } */
-    
-
-    .about h2 {
-        /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;*/
-        font-family: cursive, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 80px;
-        color: #003d6e;
-        height: 1000px;
-    }
-
-    .about .prompt {
-        width: 80%;
-        font-size: 30px;
-        
-    }
-
-     
-
-  .prompt svg {
-    font-size: 40px;
-    margin: 8px;
-    color: rgb(253, 253, 251);
-  }
-
-  /*.prompt h6 {
-    font-size: large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  .about .prompt {
+    margin-top: 10px;
+    font-size: 18px;
+    width: 90%;
     text-align: justify;
-    color: #000000;
-  }*/
+  }
 
-  .prompt h6 
-  {
-    font-size: large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: justify;
-    color: #FFFFFF; /* White text */
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with slight transparency */
-    padding: 10px; /* Space around the text for better readability */
-    border-radius: 8px; /* Smooth rounded corners */
-    display: block; /* Ensures the background wraps tightly around the text */
-    border: 1px solid #FFD700; /* Optional: Gold border for accent */
-  }
-  
-  .skills {
-    font-size: 35px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  
   .skills h1 {
-    color: #3e497a;
+    font-size: 28px;
   }
-  
-  .skills .list {
-    list-style: none;
-    width: 60%;
-  }
-  
-  .list span {
-    font-size: 20px;
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .about h2 {
-      font-size: 40px;
-    }
-  
-    .about .prompt {
-      margin-top: 10px;
-      font-size: 20px;
-      width: 80%;
-      text-align:justify;
-      justify-content:center;
-    }
-  
-    .skills {
-      text-align: center;
-    }
-    .list {
-      padding: 0;
-    }
-  
-    .skills h2 {
-      font-size: 30px;
-    }
 
+  .skills .list {
+    width: 90%;
   }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

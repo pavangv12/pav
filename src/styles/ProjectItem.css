@@ -1,0 +1,53 @@
+/* Project Item Card */
+.project-item {
+    width: 100%;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Background Image Styling */
+.project-image {
+    height: 200px;
+    background-size: cover; /* Ensures the entire image fits within the container */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents repetition of the image */
+    transition: transform 0.3s ease;
+}
+
+
+.project-item:hover .project-image {
+    transform: scale(1.05);
+}
+
+/* Project Name Styling */
+.project-name {
+    font-size: 20px;
+    color: #3e497a;
+    margin: 15px 0;
+    font-weight: 600;
+    padding: 0 10px;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words if needed */
+    overflow: visible; /* Ensure content is not hidden */
+}
+
+/* Responsiveness */
+@media (max-width: 576px) {
+    .project-name {
+        font-size: 18px;
+    }
+    .project-item {
+        max-width: 90%;
+    }
+}
