@@ -45,5 +45,5 @@ If you have suggestions or improvements, feel free to open an issue or submit a 
 ## 📬 Contact  
 
 📧 Email: [pavangv12@gmail.com]  
-💼 LinkedIn: [linkedin.com/in/pavangv12] 
+💼 LinkedIn: [[linkedin.com/in/pavangv12](https://www.linkedin.com/in/pavangv12/)] 
 
