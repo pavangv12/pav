@@ -30,7 +30,7 @@ export const ProjectList = [
     {
     name: "Stock Market Analysis and Prediction on Time Series Data",
     image: Proj3,
-    skills: "Python, Machine learning",
+    skills: "Python, Pandas, Numpy, Matplotlib, Scikit-learn, Tensorflow, Feature Engineering, Statistical Modeling",
     github: "https://github.com/pavangv12/Time-series-analysis-predict-stock-price",
   },
   {
