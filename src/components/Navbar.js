@@ -28,7 +28,7 @@ function Navbar() {
             {/* Links container */}
             <div className={`Links ${expandNavbar ? "hiddenLinks" : ""}`}>
                 <Link to="/">Home</Link>
-                <Link to="/projects">Projects</Link>
+                <Link to="/projects">Projects & Papers</Link>
                 <Link to="/experience">Experience</Link>
             </div>
         </div>
