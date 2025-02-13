@@ -24,7 +24,7 @@ export const ProjectList = [
   {
     name: "Heart Disease Prediction",
     image: Proj7,
-    skills: "Python, tensorflow",
+    skills: "Python, Pandas, Scikit-learn, Matplotlib, KaggleAPI, Machine Learning Techniques",
     github: "https://github.com/pavangv12/Heart-Disease-Prediction",
   },
     {
