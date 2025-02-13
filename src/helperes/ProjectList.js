@@ -18,8 +18,8 @@ export const ProjectList = [
   {
     name: "India’s Air – Analysis and prediction of Air Quality in Indian cities",
     image: Proj6,
-    skills: "Python, tensorflow",
-    github: "",
+    skills: "Ppandas, matplotlib, seaborn, numpy, ipywidgets, ipython",
+    github: "https://github.com/pavangv12/Analysis-and-prediction-of-Air-Quality-in-Indian-cities",
   },
   {
     name: "Heart Disease Prediction",
