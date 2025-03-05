@@ -51,6 +51,22 @@ function Experience() {
     <div className="experience">
       <h5>P.A.V.A.N. - Professional Achievements and Versatile Artistic Narrative</h5>
       <VerticalTimeline lineColor="#3e497a">
+      <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          date="2024 - 2025"
+          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          icon={<SchoolIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">
+            Indian Institute of Technology, Roorkee
+          </h3>
+
+          <h4 className="vertical-timeline-element-subtitle">
+            Post Graduate Degree
+          </h4>
+
+          <p> Data Science & Artificial Intelligence</p>
+        </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2023 - present"
@@ -77,7 +93,7 @@ function Experience() {
 
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
-          date="2021 - present"
+          date="2021 - 2023"
           iconStyle={{ background: "#3e497a", color: "#fff" }}
           icon={<SchoolIcon />}
         >

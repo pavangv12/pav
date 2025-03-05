@@ -5,7 +5,7 @@ import Proj4 from "../assets/Proj4.jpeg"
 import Proj5 from "../assets/Kidneydisease_Image.png";
 import Proj6 from "../assets/airQuality.png";
 import Proj7 from "../assets/heartdisease.png";
-
+import Proj8 from "../assets/Customer_churn_using_ANN.png";
 
 
 export const ProjectList = [
@@ -38,6 +38,12 @@ export const ProjectList = [
     image: Proj4,
     skills: "Python, Machine Learning, Streamlit",
     github: "https://github.com/pavangv12/NIFTY-50-Stock-Analysis",
+  },
+  {
+    name: "Bank Customer Churn Prediction",
+    image: Proj8,
+    skills: "Python, Machine Learning, TensorFlow, Numpy, Pandas, Scikit-learn",
+    github: "https://github.com/pavangv12/Bank_customer_churn_ANN",
   },
   {
     name: "Personal Portfolio",
