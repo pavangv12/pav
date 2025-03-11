@@ -45,18 +45,19 @@ If you’re looking for a data-driven thinker who thrives on solving real-world 
         </div>
       </div>
       <div className="skills">
-        <h1> Skills</h1>
-        <ol className="list">
-          <li className="item">
-            <h2> Skills</h2>
-            <span>
-              Python, Scikit-leaern, SQL, Power BI, Tensor Flow, Pandas, EDA, Numpy,
-              Matplotlib, Clustering, Regression, Classification, Neural Network, ASP.NET Core, C#, Blazor, WPF
-            </span>
-          </li>
-        </ol>
-      </div>
-    </div>
+  <h1>Skills</h1>
+  <div className="list">
+      <ul>
+        <li><strong>Programming & Data Handling:</strong> Python, SQL, Pandas, NumPy</li>
+        <li><strong>Machine Learning & AI:</strong> Scikit-learn, TensorFlow, Neural Networks, Deep Learning, OpenAI GPT</li>
+        <li><strong>ML Techniques:</strong> Regression, Classification, Clustering, Dimensionality Reduction</li>
+        <li><strong>Data Processing:</strong> Feature Engineering, Data Preprocessing, Exploratory Data Analysis (EDA)</li>
+        <li><strong>Visualization & Statistical Modeling:</strong> Matplotlib, Seaborn, Power BI</li>
+        <li><strong>Advanced AI Solutions:</strong> Retrieval-Augmented Generation (RAG), web scraping with FAISS and OpenAI for real-time knowledge retrieval.</li>
+      </ul>
+  </div>
+</div>
+</div>
   );
 }
 
