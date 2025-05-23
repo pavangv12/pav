@@ -6,7 +6,7 @@ import Proj5 from "../assets/Kidneydisease_Image.png";
 import Proj6 from "../assets/airQuality.png";
 import Proj7 from "../assets/heartdisease.png";
 import Proj8 from "../assets/Customer_churn_using_ANN.png";
-import Proj9 from "../assets/LLM.png";
+import Proj9 from "../assets/Books_Recommendation_using_LLM.png";
 
 
 
