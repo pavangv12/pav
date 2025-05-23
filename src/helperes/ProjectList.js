@@ -7,6 +7,7 @@ import Proj6 from "../assets/airQuality.png";
 import Proj7 from "../assets/heartdisease.png";
 import Proj8 from "../assets/Customer_churn_using_ANN.png";
 import Proj9 from "../assets/Books_Recommendation_using_LLM.png";
+import Proj10 from "../assets/rag-chatbot.jpg";
 
 
 
@@ -16,6 +17,12 @@ export const ProjectList = [
     image: Proj9,
     skills: "Built a Semantic Book Recommender using LLMs, LangChain, Gradio, and ChromaDB to enable natural language-based recommendations, classification, and sentiment-based filtering of books.",
     github: "https://github.com/pavangv12/Book-recommender-using-LLM",
+  },
+  {
+    name: "Medical Chatbot using RAG",
+    image: Proj10,
+    skills: "Pipenv, langchain, langchain_huggingface, huggingface_hub, faiss-cpu, pypdf, streamlit",
+    github: "https://github.com/pavangv12/Medical-Chatbot-using-RAG",
   },
   {
     name: "Deep learning Kidney Disease Classification ",
@@ -63,6 +70,6 @@ export const ProjectList = [
     name: "To-Do List App",
     image: Proj1,
     skills: "C#, WPF",
-        github: "https://github.com/pavangv12/ToDo-List-App",
+    github: "https://github.com/pavangv12/ToDo-List-App",
   },
 ];
