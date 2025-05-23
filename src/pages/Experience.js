@@ -62,7 +62,7 @@ function Experience() {
           </h3>
 
           <h4 className="vertical-timeline-element-subtitle">
-            Post Graduate Degree
+            Executive Post Graduate Degree
           </h4>
 
           <p> Data Science & Artificial Intelligence</p>
