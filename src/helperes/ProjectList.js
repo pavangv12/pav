@@ -6,9 +6,17 @@ import Proj5 from "../assets/Kidneydisease_Image.png";
 import Proj6 from "../assets/airQuality.png";
 import Proj7 from "../assets/heartdisease.png";
 import Proj8 from "../assets/Customer_churn_using_ANN.png";
+import Proj9 from "../assets/LLM.png";
+
 
 
 export const ProjectList = [
+  {
+    name: "Book Recommendation using LLM",
+    image: Proj9,
+    skills: "Built a Semantic Book Recommender using LLMs, LangChain, Gradio, and ChromaDB to enable natural language-based recommendations, classification, and sentiment-based filtering of books.",
+    github: "https://github.com/pavangv12/Book-recommender-using-LLM",
+  },
   {
     name: "Deep learning Kidney Disease Classification ",
     image: Proj5,
