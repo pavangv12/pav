@@ -7,6 +7,7 @@ import "../styles/ProjectDisplay.css";
 function ProjectDisplay() {
     const { id } = useParams();
     const project = ProjectList[id];
+
     return (
         <div className="project-container">
             <div className="project-card">
@@ -15,9 +16,30 @@ function ProjectDisplay() {
                 <p>
                     <b>Skills:</b> {project.skills}
                 </p>
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="github-link">
-                    <GitHubIcon />
-                </a>
+
+                <div className="project-links">
+                    <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="github-link"
+                        title="View on GitHub"
+                    >
+                        <GitHubIcon style={{ marginRight: "8px" }} />
+                        GitHub
+                    </a>
+
+                    {project.demo && (
+                        <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="demo-button"
+                        >
+                            Live Demo
+                        </a>
+                    )}
+                </div>
             </div>
         </div>
     );

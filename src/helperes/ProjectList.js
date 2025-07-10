@@ -8,10 +8,19 @@ import Proj7 from "../assets/heartdisease.png";
 import Proj8 from "../assets/Customer_churn_using_ANN.png";
 import Proj9 from "../assets/Books_Recommendation_using_LLM.png";
 import Proj10 from "../assets/rag-chatbot.jpg";
+import Proj11 from "../assets/APEX.png";
 
 
 
 export const ProjectList = [
+    {
+    name: "APEX – Applicant Profile Evaluator using eXplainable AI",
+    image: Proj11,
+    skills: "Streamlit, Google Generative AI (Gemini), SentenceTransformers, PyPDF2, ReportLab, scikit-learn, dotenv",
+    github: "https://github.com/pavangv12/apex",
+    demo: "https://apexai.streamlit.app/",
+  },
+
   {
     name: "Book Recommendation using LLM",
     image: Proj9,
