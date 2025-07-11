@@ -62,17 +62,84 @@
   color: #ff5722; /* Hover color for icons */
 }
 
-.prompt h6 {
-  font-size: 18px;
-  font-family: "Verdana", Geneva, Tahoma, sans-serif;
-  text-align: justify;
-  color: #ffffff; /* White text for readability */
-  background-color: rgba(0, 0, 0, 0.6); /* Black background with transparency */
-  padding: 15px; /* Padding for better spacing */
-  border-radius: 10px; /* Rounded corners */
-  border: 1px solid #ffc107; /* Gold border for accent */
-  margin-top: 300px; /* Adjust spacing */
+.bio {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 25px 30px;
+  border-radius: 12px;
+  border: 1px solid #ffc107;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
 }
+
+.bio p {
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.bio p {
+  animation: slideIn 0.6s ease forwards;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.bio p:nth-child(1) { animation-delay: 0.2s; }
+.bio p:nth-child(2) { animation-delay: 0.4s; }
+.bio p:nth-child(3) { animation-delay: 0.6s; }
+.bio p:nth-child(4) { animation-delay: 0.8s; }
+.bio p:nth-child(5) { animation-delay: 1s; }
+.bio p:nth-child(6) { animation-delay: 1.2s; }
+
+
+.bio-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #ffc107;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.bio-image img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffc107;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.bio-text {
+  flex: 1;
+  color: #ffffff;
+}
+
+.bio-text p {
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+  margin-bottom: 15px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.bio-text .signature {
+  font-style: italic;
+  color: #ffc107;
+  font-weight: 500;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
 
 .skills {
   max-width: 800px;

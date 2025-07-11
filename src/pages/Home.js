@@ -10,17 +10,14 @@ function Home() {
       <div className="about">
         <h2> Hi, I'm Pavan</h2>
           <div className="prompt">
-          <h6 className="bio">
-          I am a Data Scientist who believes that every dataset has a story to tell. With a strong foundation in machine learning, predictive analytics, and statistical modeling, I turn complex data into valuable insights that drive meaningful impact.
-
-From building predictive models that improve efficiency to uncovering hidden trends in large datasets, I love working at the intersection of data, technology, and decision-making. My experience spans classification, regression, and clustering, leveraging tools like Python, SQL, TensorFlow, and Scikit-learn to create solutions that matter.
-
-Beyond my technical skills, I am a published researcher in cybersecurity, showcasing my analytical approach to problem-solving. I am constantly pushing the boundaries of my knowledge, exploring deep learning, AI, and time series forecasting to stay ahead in this fast-evolving field.
-
-If you’re looking for a data-driven thinker who thrives on solving real-world challenges, let’s connect and create something impactful together.
-</h6>
-
-
+          <div className="bio">
+  <p>I’m Pavan, a Data Scientist passionate about turning raw data into meaningful, real-world solutions.</p>
+  <p>Having worked in domains like healthcare, automation, and quality engineering, I apply machine learning, Generative AI, and statistical modeling to solve real-world problems and build scalable systems.</p>
+  <p>My stack includes Python, SQL, Scikit-learn, TensorFlow, and LangChain, with growing interest in LLMs, data storytelling, and real-time analytics.</p>
+  <p>I’ve also contributed to academic research in network security, reflecting a mindset grounded in exploration and rigor.</p>
+  <p>Outside work, I enjoy badminton, gardening, and watching films that make me think.</p>
+  <p>I'm always open to collaborations, ideas, and data-driven opportunities that create impact.</p>
+</div>
           <a
             href="https://www.linkedin.com/in/pavangv12/"
             target="_blank"
