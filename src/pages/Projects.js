@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ProjectItem from '../components/ProjectItem';
 import { ProjectList } from '../helpers/ProjectList';
 import useScrollReveal from '../hooks/useScrollReveal';

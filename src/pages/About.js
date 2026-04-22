@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SchoolIcon from '@mui/icons-material/School';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import useScrollReveal from '../hooks/useScrollReveal';
