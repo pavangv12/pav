@@ -129,6 +129,10 @@
   background: rgba(6, 182, 212, 0.1);
 }
 
+@media (max-width: 1024px) {
+  .bento-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 768px) {
   .projects-page { padding: 80px 20px 60px; }
   .bento-grid { grid-template-columns: 1fr; }

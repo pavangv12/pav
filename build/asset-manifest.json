@@ -1,17 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.cc75ff72.css",
-    "main.js": "/static/js/main.c6219596.js",
+    "main.css": "/static/css/main.bce0e9c3.css",
+    "main.js": "/static/js/main.c95f75ba.js",
     "static/js/787.ddc014f8.chunk.js": "/static/js/787.ddc014f8.chunk.js",
-    "static/media/pavan.jpg": "/static/media/pavan.c7ba960d2bac828f02f4.jpg",
-    "static/media/success.png": "/static/media/success.e86996abfe9037ee7471.png",
+    "static/media/Portfolio.jpg": "/static/media/Portfolio.5f0898afb9df628d244f.jpg",
+    "static/media/APEX.png": "/static/media/APEX.005503b38876cb97b0f0.png",
+    "static/media/Books_Recommendation_using_LLM.png": "/static/media/Books_Recommendation_using_LLM.b57a594a2464c785dddb.png",
+    "static/media/Kidneydisease_Image.png": "/static/media/Kidneydisease_Image.7de973b4fca129022511.png",
+    "static/media/airQuality.png": "/static/media/airQuality.4f0f8405cb7720f39ce1.png",
+    "static/media/heartdisease.png": "/static/media/heartdisease.35f1641ef3ad60525d5b.png",
+    "static/media/Pavan_background.jpg": "/static/media/Pavan_background.579866a3110ca362fb55.jpg",
+    "static/media/Proj3.jpg": "/static/media/Proj3.7871b99536e71d50d0e9.jpg",
+    "static/media/rag-chatbot.jpg": "/static/media/rag-chatbot.eb29ec1d8109661afb4a.jpg",
+    "static/media/ToDoList.png": "/static/media/ToDoList.ef42689eedb0bd592b89.png",
+    "static/media/Customer_churn_using_ANN.png": "/static/media/Customer_churn_using_ANN.5c04f4112fbcb6834f88.png",
     "index.html": "/index.html",
-    "main.cc75ff72.css.map": "/static/css/main.cc75ff72.css.map",
-    "main.c6219596.js.map": "/static/js/main.c6219596.js.map",
+    "main.bce0e9c3.css.map": "/static/css/main.bce0e9c3.css.map",
+    "main.c95f75ba.js.map": "/static/js/main.c95f75ba.js.map",
     "787.ddc014f8.chunk.js.map": "/static/js/787.ddc014f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc75ff72.css",
-    "static/js/main.c6219596.js"
+    "static/css/main.bce0e9c3.css",
+    "static/js/main.c95f75ba.js"
   ]
 }

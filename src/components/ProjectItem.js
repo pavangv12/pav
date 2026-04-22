@@ -15,10 +15,13 @@ function ProjectItem({ image, name, id, skills, delay = 0 }) {
             onKeyDown={e => e.key === 'Enter' && navigate("/project/" + id)}
             aria-label={name}
         >
-            <div
-                className="project-image"
-                style={{ backgroundImage: `url(${image})` }}
-            >
+            <div className="project-image">
+                <img
+                    src={image}
+                    alt={name}
+                    loading="lazy"
+                    className="project-img"
+                />
                 <div className="project-overlay">
                     <span className="project-open"><ArrowForwardIcon /></span>
                 </div>

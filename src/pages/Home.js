@@ -3,7 +3,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import { useNavigate } from 'react-router-dom';
-import { ProjectList } from '../helperes/ProjectList';
+import { ProjectList } from '../helpers/ProjectList';
+import useScrollReveal from '../hooks/useScrollReveal';
 import "../styles/Home.css";
 
 const ROLES = ['Data Scientist', 'AI Engineer', 'RPA Automation Expert', 'ML Practitioner'];
@@ -42,20 +43,6 @@ function useTypingEffect(words, speed = 80, pause = 1800) {
   }, [charIdx, deleting, wordIdx, words, speed, pause]);
 
   return display;
-}
-
-function useScrollReveal(threshold = 0.15) {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold }
-    );
-    if (ref.current) obs.observe(ref.current);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return [ref, visible];
 }
 
 function Home() {

@@ -1,5 +1,7 @@
-﻿import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+﻿import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+import CircularProgress from '@mui/material/CircularProgress';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import {
     VerticalTimeline, VerticalTimelineElement,
 } from "react-vertical-timeline-component";
@@ -29,14 +31,60 @@ function Experience() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [errorMessage, setErrorMessage] = useState("");
+
+  // Auto-clear success message after 5 seconds
+  useEffect(() => {
+    if (submitted) {
+      const timer = setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: "", email: "", message: "" });
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitted]);
+
+  // Validation function
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters";
+    }
+    return newErrors;
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    // Clear error for this field when user starts typing
+    if (errors[name]) {
+      setErrors({ ...errors, [name]: "" });
+    }
+    setErrorMessage("");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setErrorMessage("");
+
+    // Validate form
+    const newErrors = validateForm();
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
     setIsSubmitting(true);
 
     const templateParams = {
@@ -45,13 +93,18 @@ function Experience() {
       message: formData.message,
     };
 
-    emailjs.send("service_h9fcp8n", "template_f3166zs", templateParams, "7ni3RvLAz2Jr5qzWl")
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      templateParams,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    )
       .then(() => {
         setSubmitted(true);
-        setFormData({ name: "", email: "", message: "" });
+        setErrors({});
       })
       .catch((error) => {
-        alert("Something went wrong. Please try again later.");
+        setErrorMessage("Something went wrong. Please try again later.");
         console.error("EmailJS Error:", error);
       })
       .finally(() => {
@@ -185,12 +238,18 @@ function Experience() {
 
         {submitted ? (
           <div className="contact-success glass-card">
+            <CheckCircleIcon style={{ fontSize: 48, color: '#06b6d4', animation: 'fadeInUp 0.6s ease both' }} />
             <h3>Message sent!</h3>
             <p>Thank you for reaching out. I will get back to you soon.</p>
-            <button className="btn-primary" onClick={() => setSubmitted(false)}>Send another</button>
+            <p className="success-timer">This page will reset in a few seconds...</p>
           </div>
         ) : (
           <form className="contact-form glass-card" onSubmit={handleSubmit}>
+            {errorMessage && (
+              <div className="form-error-message">
+                <span>{errorMessage}</span>
+              </div>
+            )}
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="name">Name</label>
@@ -201,8 +260,9 @@ function Experience() {
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="Your name"
-                  required
+                  className={errors.name ? "input-error" : ""}
                 />
+                {errors.name && <span className="field-error">{errors.name}</span>}
               </div>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
@@ -213,8 +273,9 @@ function Experience() {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="your@email.com"
-                  required
+                  className={errors.email ? "input-error" : ""}
                 />
+                {errors.email && <span className="field-error">{errors.email}</span>}
               </div>
             </div>
             <div className="form-group">
@@ -226,13 +287,23 @@ function Experience() {
                 onChange={handleInputChange}
                 placeholder="Tell me about your project or idea..."
                 rows={5}
-                required
+                className={errors.message ? "input-error" : ""}
               />
+              {errors.message && <span className="field-error">{errors.message}</span>}
             </div>
             <div className="form-actions">
               <button type="submit" className="btn-primary" disabled={isSubmitting}>
-                <SendIcon style={{ fontSize: 16, marginRight: 8 }} />
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? (
+                  <>
+                    <CircularProgress size={16} style={{ marginRight: 8, color: 'inherit' }} />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <SendIcon style={{ fontSize: 16, marginRight: 8 }} />
+                    Send Message
+                  </>
+                )}
               </button>
               <a
                 href="https://www.linkedin.com/in/pavangv12/"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ProjectList } from '../helperes/ProjectList';
+import { ProjectList } from '../helpers/ProjectList';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';

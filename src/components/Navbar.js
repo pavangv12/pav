@@ -27,6 +27,7 @@ function Navbar() {
 
             <div className="navbar-links">
                 <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
+                <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
                 <Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>Projects</Link>
                 <Link to="/experience" className={location.pathname === '/experience' ? 'active' : ''}>Experience</Link>
             </div>
@@ -39,6 +40,7 @@ function Navbar() {
 
             <div className={`mobile-menu ${expandNavbar ? 'open' : ''}`}>
                 <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
+                <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
                 <Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>Projects</Link>
                 <Link to="/experience" className={location.pathname === '/experience' ? 'active' : ''}>Experience</Link>
             </div>
