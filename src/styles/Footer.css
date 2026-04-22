@@ -1,57 +1,65 @@
+﻿/* ===== FOOTER ===== */
 .footer {
-  width: 100%;
-  height: auto; /* Adjust height dynamically */
-  background: #21325e;
+  background: rgba(10, 15, 30, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(59, 130, 246, 0.1);
+  padding: 28px 5vw;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 20px; /* Add consistent padding */
-  margin-top: 200px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.footer-heading {
-  color: #ffffff;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+.footer-brand {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
 }
 
-.socialMedia {
+.footer-socials {
   display: flex;
-  gap: 15px; /* Add gap for better spacing between icons */
+  gap: 12px;
 }
 
-.socialMedia a {
-  color: white;
-  transition: transform 0.2s, color 0.2s;
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.25s ease;
 }
 
-.socialMedia a:hover {
-  transform: scale(1.1); /* Subtle zoom effect */
-  color: #00bcd4; /* Change icon color on hover */
+.footer-socials a:hover {
+  color: var(--accent-cyan);
+  border-color: rgba(6, 182, 212, 0.4);
+  background: rgba(6, 182, 212, 0.08);
+  transform: translateY(-2px);
 }
 
-.socialMedia svg {
-  font-size: 50px;
-  cursor: pointer;
+.footer-copy {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+  opacity: 0.7;
 }
 
-.footer-text {
-  color: white;
-  margin-top: 15px;
-  font-size: 0.9rem;
-}
-
-@media only screen and (max-width: 600px) {
-  .footer-heading {
-    font-size: 1.2rem; /* Adjust heading size for smaller screens */
-  }
-
-  .socialMedia svg {
-    font-size: 40px;
-  }
-
-  .footer-text {
-    font-size: 0.8rem;
-  }
+@media (max-width: 600px) {
+  .footer-inner { flex-direction: column; align-items: center; text-align: center; }
 }

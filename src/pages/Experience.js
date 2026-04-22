@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import {
     VerticalTimeline, VerticalTimelineElement,
@@ -7,12 +7,28 @@ import "react-vertical-timeline-component/style.min.css";
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import SendIcon from '@mui/icons-material/Send';
 import "../styles/Experience.css";
-import { Button, TextField, Box } from '@mui/material';
+
+const workStyle = {
+  background: 'rgba(59, 130, 246, 0.1)',
+  border: '1px solid rgba(59, 130, 246, 0.3)',
+  boxShadow: '0 0 20px rgba(59, 130, 246, 0.1)',
+};
+
+const eduStyle = {
+  background: 'rgba(139, 92, 246, 0.1)',
+  border: '1px solid rgba(139, 92, 246, 0.3)',
+  boxShadow: '0 0 20px rgba(139, 92, 246, 0.1)',
+};
+
+const workIconStyle = { background: '#1d4ed8', color: '#fff' };
+const eduIconStyle  = { background: '#7c3aed', color: '#fff' };
 
 function Experience() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -30,8 +46,8 @@ function Experience() {
     };
 
     emailjs.send("service_h9fcp8n", "template_f3166zs", templateParams, "7ni3RvLAz2Jr5qzWl")
-      .then((response) => {
-        alert("Thank you for reaching out! We will get back to you soon.");
+      .then(() => {
+        setSubmitted(true);
         setFormData({ name: "", email: "", message: "" });
       })
       .catch((error) => {
@@ -43,173 +59,194 @@ function Experience() {
       });
   };
 
-  const handleLinkedInRedirect = () => {
-    window.open("https://www.linkedin.com/in/pavangv12/", "_blank");
-  };
-
   return (
-    <div className="experience">
-      <h5>P.A.V.A.N. - Professional Achievements and Versatile Artistic Narrative</h5>
-      <VerticalTimeline lineColor="#3e497a">
-      <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="2024 - 2025"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Indian Institute of Technology, Roorkee
-          </h3>
+    <div className="experience-page">
+      <div className="experience-header">
+        <h1 className="section-title">
+          My <span className="gradient-text">Journey</span>
+        </h1>
+        <p className="section-subtitle">
+          P.A.V.A.N. — Professional Achievements and Versatile Artistic Narrative
+        </p>
+      </div>
 
-          <h4 className="vertical-timeline-element-subtitle">
-            Executive Post Graduate Degree
-          </h4>
+      <div className="timeline-wrap">
+        <VerticalTimeline lineColor="rgba(59, 130, 246, 0.25)">
 
-          <p> Data Science & Artificial Intelligence</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="2023 - present"
-          iconStyle={{ background: "#e9d35b", color: "#fff" }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Software Engineer 2 - Radiometer
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">Bengaluru, KA</h4>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="2024 - 2025"
+            contentStyle={eduStyle}
+            contentArrowStyle={{ borderRight: '7px solid rgba(139, 92, 246, 0.4)' }}
+            iconStyle={eduIconStyle}
+            icon={<SchoolIcon />}
+          >
+            <h3 className="tl-title">IIT Roorkee</h3>
+            <h4 className="tl-subtitle">Executive Post Graduate Degree</h4>
+            <p className="tl-detail">Data Science and Artificial Intelligence</p>
           </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="Nov 2022 - Oct 2023"
-          iconStyle={{ background: "#e9d35b", color: "#fff" }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Software Engineer Intern - Radiometer
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">Bengaluru, KA</h4>
-        </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="2023 - present"
+            contentStyle={workStyle}
+            contentArrowStyle={{ borderRight: '7px solid rgba(59, 130, 246, 0.4)' }}
+            iconStyle={workIconStyle}
+            icon={<WorkIcon />}
+          >
+            <h3 className="tl-title">Software Engineer 2</h3>
+            <h4 className="tl-subtitle">Radiometer · Bengaluru, KA</h4>
+            <p className="tl-detail">Leading RPA automation and AI-driven quality engineering initiatives in a global medical device company.</p>
+          </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="2021 - 2023"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            MS Ramaiah Institute of Technology, Bengaluru, Karnataka.
-          </h3>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Nov 2022 - Oct 2023"
+            contentStyle={workStyle}
+            contentArrowStyle={{ borderRight: '7px solid rgba(59, 130, 246, 0.4)' }}
+            iconStyle={workIconStyle}
+            icon={<WorkIcon />}
+          >
+            <h3 className="tl-title">Software Engineer Intern</h3>
+            <h4 className="tl-subtitle">Radiometer · Bengaluru, KA</h4>
+            <p className="tl-detail">Built automation pipelines and ML prototypes across healthcare quality workflows.</p>
+          </VerticalTimelineElement>
 
-          <h4 className="vertical-timeline-element-subtitle">
-            Master's Degree
-          </h4>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="2021 - 2023"
+            contentStyle={eduStyle}
+            contentArrowStyle={{ borderRight: '7px solid rgba(139, 92, 246, 0.4)' }}
+            iconStyle={eduIconStyle}
+            icon={<SchoolIcon />}
+          >
+            <h3 className="tl-title">MS Ramaiah Institute of Technology</h3>
+            <h4 className="tl-subtitle">Master's Degree</h4>
+            <p className="tl-detail">Computer Science and Engineering, Bengaluru</p>
+          </VerticalTimelineElement>
 
-          <p> Computer Science and Engineering</p>
-        </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="2018 - 2019"
+            contentStyle={workStyle}
+            contentArrowStyle={{ borderRight: '7px solid rgba(59, 130, 246, 0.4)' }}
+            iconStyle={workIconStyle}
+            icon={<WorkIcon />}
+          >
+            <h3 className="tl-title">Database Administrator</h3>
+            <h4 className="tl-subtitle">Tata Consultancy Services · Bengaluru, KA</h4>
+          </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="2018 - 2019"
-          iconStyle={{ background: "#e9d35b", color: "#fff" }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Database Administrator - Tata Consultancy Services.
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">Bengaluru, KA</h4>
-        </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="2014 - 2018"
+            contentStyle={eduStyle}
+            contentArrowStyle={{ borderRight: '7px solid rgba(139, 92, 246, 0.4)' }}
+            iconStyle={eduIconStyle}
+            icon={<SchoolIcon />}
+          >
+            <h3 className="tl-title">PES College of Engineering, Mandya</h3>
+            <h4 className="tl-subtitle">Bachelor of Engineering</h4>
+            <p className="tl-detail">Computer Science and Engineering</p>
+          </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="2014 - 2018"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            PES College of Engineering, Mandya, Karnataka.
-          </h3>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="2012 - 2014"
+            contentStyle={eduStyle}
+            contentArrowStyle={{ borderRight: '7px solid rgba(139, 92, 246, 0.4)' }}
+            iconStyle={eduIconStyle}
+            icon={<SchoolIcon />}
+          >
+            <h3 className="tl-title">Alva's PU College, Moodabidri</h3>
+            <h4 className="tl-subtitle">10+2 (PUC) — PCMC</h4>
+          </VerticalTimelineElement>
 
-          <h4 className="vertical-timeline-element-subtitle">
-            Bachelor's Degree in Computer Science and Engineering
-          </h4>
-        </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="2002 - 2012"
+            contentStyle={eduStyle}
+            contentArrowStyle={{ borderRight: '7px solid rgba(139, 92, 246, 0.4)' }}
+            iconStyle={eduIconStyle}
+            icon={<SchoolIcon />}
+          >
+            <h3 className="tl-title">Pushpa High School, Periyapatna</h3>
+            <h4 className="tl-subtitle">High School</h4>
+          </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="2012 - 2014"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Alva's PU College, Moodabidri, Karnataka.
-          </h3>
+        </VerticalTimeline>
+      </div>
 
-          <h4 className="vertical-timeline-element-subtitle">10+2(PUC) - PCMC</h4>
-        </VerticalTimelineElement>
+      <hr className="section-divider" />
 
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="2002 - 2012"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Pushpa High School, Periyapatna, Karnataka.
-          </h3>
-          <p> High School</p>
-        </VerticalTimelineElement>
-      </VerticalTimeline>
+      <div className="contact-section">
+        <h2 className="section-title">Get in <span className="gradient-text">Touch</span></h2>
+        <p className="section-subtitle">Have a project in mind? Let us talk.</p>
 
-      <Box className="contact-form" p={2} mt={4} border={1} borderRadius={2} borderColor="#3e497a">
-        <h2>Contact Me</h2>
-        <form onSubmit={handleSubmit}>
-          <TextField
-            fullWidth
-            margin="normal"
-            label="Name"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-            required
-          />
-          <TextField
-            fullWidth
-            margin="normal"
-            label="Email"
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-          />
-          <TextField
-            fullWidth
-            margin="normal"
-            label="Message"
-            name="message"
-            value={formData.message}
-            onChange={handleInputChange}
-            multiline
-            rows={4}
-            required
-          />
-          <Button type="submit" variant="contained" color="primary" disabled={isSubmitting}>
-            {isSubmitting ? "Submitting..." : "Submit"}
-          </Button>
-        </form>
-      </Box>
-
-      <Box mt={4} textAlign="center">
-        <Button
-          variant="contained"
-          color="primary"
-          startIcon={<LinkedInIcon />}
-          onClick={handleLinkedInRedirect}
-        >
-          Connect with LinkedIn
-        </Button>
-      </Box>
+        {submitted ? (
+          <div className="contact-success glass-card">
+            <h3>Message sent!</h3>
+            <p>Thank you for reaching out. I will get back to you soon.</p>
+            <button className="btn-primary" onClick={() => setSubmitted(false)}>Send another</button>
+          </div>
+        ) : (
+          <form className="contact-form glass-card" onSubmit={handleSubmit}>
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                placeholder="Tell me about your project or idea..."
+                rows={5}
+                required
+              />
+            </div>
+            <div className="form-actions">
+              <button type="submit" className="btn-primary" disabled={isSubmitting}>
+                <SendIcon style={{ fontSize: 16, marginRight: 8 }} />
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </button>
+              <a
+                href="https://www.linkedin.com/in/pavangv12/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline linkedin-btn"
+              >
+                <LinkedInIcon style={{ fontSize: 18, marginRight: 8 }} />
+                Connect on LinkedIn
+              </a>
+            </div>
+          </form>
+        )}
+      </div>
     </div>
   );
 }
