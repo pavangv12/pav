@@ -34,6 +34,9 @@ function ProjectDisplay() {
                 </div>
                 <div className="pd-content">
                     <h1 className="pd-title gradient-text">{project.name}</h1>
+                    {project.description && (
+                        <p className="pd-description">{project.description}</p>
+                    )}
                     <div className="pd-skills-wrap">
                         <p className="pd-skills-label">Technologies used</p>
                         <div className="pd-skill-pills">

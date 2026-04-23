@@ -77,6 +77,16 @@
   margin: 0;
 }
 
+.pd-description {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+  text-align: justify;
+  text-align-last: left;
+}
+
 .pd-skills-label {
   font-size: 12px;
   font-weight: 500;

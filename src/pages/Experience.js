@@ -234,7 +234,7 @@ function Experience() {
 
       <div className="contact-section">
         <h2 className="section-title">Get in <span className="gradient-text">Touch</span></h2>
-        <p className="section-subtitle">Have a project in mind? Let us talk.</p>
+        <p className="section-subtitle">Have a project in mind? Let's Connect.</p>
 
         {submitted ? (
           <div className="contact-success glass-card">

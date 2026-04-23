@@ -7,7 +7,7 @@ import { ProjectList } from '../helpers/ProjectList';
 import useScrollReveal from '../hooks/useScrollReveal';
 import "../styles/Home.css";
 
-const ROLES = ['Data Scientist', 'AI Engineer', 'RPA Automation Expert', 'ML Practitioner'];
+const ROLES = ['Senior Software Engineer', 'Data Scientist', 'AI & ML Practitioner', 'Generative AI Engineer', 'LLM & Agentic AI Developer'];
 
 const SKILLS = {
   'Languages & Data': ['Python', 'SQL', 'Pandas', 'NumPy'],
